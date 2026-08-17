@@ -52,6 +52,18 @@ if DATABASE_URL is not None:
         environ['UPGRADE_PACKAGES'] = config_dict.get('UPDATE_PACKAGES', 'False')
     conn.close()
 
+from datetime import datetime
+import pytz
+
+# Define the Indian time zone
+india_tz = pytz.timezone('Asia/Kolkata')
+
+# Get current time in India
+india_time = datetime.now(india_tz)
+
+print("Current Time in India:", india_time.strftime('%Y-%m-%d %H:%M:%S %Z%z'))
+
+
 UPGRADE_PACKAGES = environ.get('UPGRADE_PACKAGES', 'False') 
 if UPGRADE_PACKAGES.lower() == 'true':
     packages = [dist.project_name for dist in working_set]
