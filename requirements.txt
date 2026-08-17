@@ -26,6 +26,7 @@ mutagen
 markdown
 natsort
 pillow
+pip3 
 psutil
 pybase64
 pycountry
@@ -33,6 +34,9 @@ pymongo
 pyrofork==2.2.11
 python-dotenv
 python-magic
+python 
+python3
+pytz
 qbittorrent-api
 requests
 speedtest-cli
